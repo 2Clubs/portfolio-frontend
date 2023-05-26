@@ -7,7 +7,7 @@ const Header = (props) => {
 
   return (
     <header>
-      <Navbar color={"dark"}>
+      <Navbar color={"info"}>
         <Navbar.Brand>
           <Navbar.Item href="/">
             Dan Bennett
