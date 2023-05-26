@@ -19,11 +19,11 @@ function App() {
         />
         <Route
           path='/projects'
-          element={<Projects/>}
+          element={<Projects URL={URL} />}
         />
         <Route
           path='/about'
-          element={<About/>}
+          element={<About URL={URL}/>}
         />
       </Routes>
       <Footer />
