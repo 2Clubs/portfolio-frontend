@@ -24,7 +24,7 @@ const About = (props) => {
   // define a function that will return the JSX needed once we get the data
   const loaded = () => (
     <Card style={{width: 300, margin: 'auto'}}>
-      <Card.Image src="../public/DanBennett.png"/>
+      <Card.Image src=""/>
       <Heading>{about.name}</Heading>
       <Heading subtitle size={6}>{about.email}</Heading>
       <Content>{about.bio}</Content>
