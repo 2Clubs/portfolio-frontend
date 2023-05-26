@@ -23,8 +23,8 @@ const About = (props) => {
 
   // define a function that will return the JSX needed once we get the data
   const loaded = () => (
-    <Card style={{width: 300, margin: 'auto'}}>
-      <Card.Image src=""/>
+    <Card style={{width: 400, margin: 'auto'}}>
+      <Card.Image src="http://bulma.io/images/placeholders/1280x960.png"/>
       <Heading>{about.name}</Heading>
       <Heading subtitle size={6}>{about.email}</Heading>
       <Content>{about.bio}</Content>
