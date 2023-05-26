@@ -1,31 +1,30 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import 'bulma/css/bulma.min.css'
+import { Navbar } from 'react-bulma-components';
 
 const Header = (props) => {
-    //inline style for the nav tag
-    const navStyle = {
-        display: "flex",
-        justifyContent: "space-around",
-        border: "3px solid black",
-        padding: "8px",
-        width: "90%",
-        margin: "auto",
-    };
+
 
   return (
     <header>
-      <h1>My Portfolio Page</h1>
-      <nav style={navStyle}>
-        <Link to="/">
-          <div>HOME</div>
-        </Link>
-        <Link to="/about">
-          <div>ABOUT</div>
-        </Link>
-        <Link to="/projects">
-          <div>PROJECTS</div>
-        </Link>
-      </nav>
+      <Navbar color={"dark"}>
+        <Navbar.Brand>
+          <Navbar.Item href="/">
+            Dan Bennett
+          </Navbar.Item>
+        </Navbar.Brand>
+        <Navbar.Container align='right'>
+          <Navbar.Item href='/'>
+          HOME
+          </Navbar.Item>
+        <Navbar.Item href='/about'>
+          ABOUT
+        </Navbar.Item>
+        <Navbar.Item href='/projects'>
+          PROJECTS
+        </Navbar.Item>
+        </Navbar.Container>
+      </Navbar>
     </header>
   )
 }

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import 'bulma/css/bulma.min.css'
-import { Button, Box, Card } from "react-bulma-components";
+import { Button, Card } from "react-bulma-components";
 
 function Projects(props) {
   // create state to hold projects
