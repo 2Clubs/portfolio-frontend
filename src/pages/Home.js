@@ -14,7 +14,9 @@ const Home = (props) => {
   }, [] )
 
   const loaded = () => {
-    <img src={home.headshot + ".jpeg"} alt='Dan Bennett'/>
+    <div>
+      <img src={home.headshot+'.jpeg'} alt='Dan Bennett'/>
+    </div>
   }
 
   return home ? loaded() : <h1>Loading...</h1>

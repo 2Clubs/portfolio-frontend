@@ -1,5 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from "react"
+import 'bulma/css/bulma.min.css'
+import { Card, Heading, Content } from 'react-bulma-components';
 
 const About = (props) => {
     const [about, setAbout] = useState(null)
@@ -21,11 +23,12 @@ const About = (props) => {
 
   // define a function that will return the JSX needed once we get the data
   const loaded = () => (
-    <div>
-      <h2>{about.name}</h2>
-      <h3>{about.email}</h3>
-      <p>{about.bio}</p>
-    </div>
+    <Card style={{width: 300, margin: 'auto'}}>
+      <Card.Image src="../public/DanBennett.png"/>
+      <Heading>{about.name}</Heading>
+      <Heading subtitle size={6}>{about.email}</Heading>
+      <Content>{about.bio}</Content>
+    </Card>
   );
 
   // if data arrives return the result of loaded, if not, an h1 that says loading
