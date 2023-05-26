@@ -15,7 +15,7 @@ function App() {
       <Routes>
         <Route
           exact path='/'
-          element={<Home />}
+          element={<Home URL={URL} />}
         />
         <Route
           path='/projects'
@@ -23,7 +23,7 @@ function App() {
         />
         <Route
           path='/about'
-          element={<About URL={URL}/>}
+          element={<About URL={URL} />}
         />
       </Routes>
       <Footer />
