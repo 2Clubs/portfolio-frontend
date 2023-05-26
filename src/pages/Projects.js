@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import 'bulma/css/bulma.min.css'
+import { Button, Box, Card } from "react-bulma-components";
 
 function Projects(props) {
   // create state to hold projects
@@ -15,20 +17,26 @@ function Projects(props) {
   };
 
   // make an initial call for the data inside a useEffect, so it only happens once on component load
-  useEffect(() => {getProjectsData()}, []);
+  useEffect(() => {
+    getProjectsData()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // define a function that will return the JSX needed once we get the data
   const loaded = () => {
     return projects.map((project) => (
       <div>
+        <Card>
         <h1>{project.name}</h1>
-        <img src={project.image} />
+        <img src={project.image} alt={project.name}/>
+        <br/>
         <a href={project.git}>
-          <button>Github</button>
-        </a>
+          <Button color="primary">Github</Button>
+        </a>{" "}
         <a href={project.live}>
-          <button>Live Site</button>
+          <Button color={"primary"}>Live Site</Button>
         </a>
+        </Card>
       </div>
     ));
   };
